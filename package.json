@@ -1,11 +1,14 @@
 {
   "name": "isratek",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Проект сайта по производству и продаже упаковочных материалов",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "4.0.2"
+  }
 }
