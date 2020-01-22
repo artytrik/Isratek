@@ -1,0 +1,37 @@
+.partners-list {
+  @include clear-ul;
+  margin-bottom: 30px;
+}
+
+.partners-list__item {
+  margin-bottom: 22px;
+}
+
+.partners-list__image-wrapper {
+  text-align: center;
+  width: 70%;
+  height: 34px;
+  margin: 0 auto;
+}
+
+@include tablet {
+  .partners-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .partners-list__image-wrapper {
+    width: 80%;
+  }
+}
+
+@include desktop {
+  .partners-list__image-wrapper {
+    width: 100%;
+  }
+
+  .partners-list {
+    margin-top: 25px;
+  }
+}

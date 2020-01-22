@@ -1,0 +1,54 @@
+.language-list {
+  @include clear-ul;
+
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.language__list-item {
+  position: relative;
+  margin-right: 5px;
+
+  &::after {
+    @include pseudo;
+
+    top: 12px;
+    right: -5px;
+
+    width: 2px;
+    height: 12px;
+
+    background-color: $white;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.language__list-item-link {
+  display: block;
+  padding: 10px;
+  @include font(12px, normal, 16px, "Arimo", $white);
+
+  &:hover,
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--active {
+    color: $blue;
+  }
+}
+
+@include desktop {
+  .language-list {
+    margin-top: 10px;
+    margin-left: 170px;
+  }
+}
