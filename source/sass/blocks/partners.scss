@@ -22,7 +22,7 @@
 .partners__item {
   position: relative;
   @include back("../img/partner-back.jpg");
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &::before {
     @include pseudo;
