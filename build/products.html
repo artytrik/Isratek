@@ -5,8 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Исратэк</title>
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-
+  <header class="page-header page-header--inner">
+    <div class="page-header__wrapper">
+      <button class="page-header__toggle">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="page-header__logo-wrapper">
+        <a href="index.html" class="page-header__logo-link">
+          <img src="img/logo.png" alt="Исратэк" class="page-header__logo">
+        </a>
+      </div>
+      <p class="page-header__description">производственный комплекс по выпуску
+        высококачественных полимерных
+        упаковочных пленок</p>
+      <ul class="page-header__language-list language-list">
+        <li class="language__list-item">
+          <a href="index.html" class="language__list-item-link language__list-item-link--active">RU</a>
+        </li>
+        <li class="language__list-item">
+          <a href="#" class="language__list-item-link">EN</a>
+        </li>
+      </ul>
+      <div class="page-header__contacts">
+        <a href="tel:8(495)5804876" class="page-header__contacts-link">
+          <span class="page-header__contacts-link-text">+7 (495) 580-48-76</span>
+          <img src="img/call-answer.png" alt="Обратный звонок" class="page-header__contacts-link-image">
+        </a>
+      </div>
+    </div>
+    <nav class="page-header__site-list">
+      <ul class="site-list">
+        <li class="site-list__item">
+          <a href="index.html" class="site-list__item-link">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="about.html" class="site-list__item-link">О компании</a>
+        </li>
+        <li class="site-list__item">
+          <a href="products.html" class="site-list__item-link site-list__item-link--active">Каталог</a>
+        </li>
+        <li class="site-list__item">
+          <a href="contacts.html" class="site-list__item-link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="inner-main">
+    <section class="breadcrumbs">
+      <div class="breadcrumbs__wrapper">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item"><a href="products.html" class="breadcrumbs__link breadcrumbs__link--active">Продукция</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="intro intro--inner intro--products">
+      <div class="intro__wrapper intro__wrapper--inner">
+        <div class="intro__text-wrapper intro__text-wrapper--inner">
+          <h1 class="intro__header intro__header--inner">Продукция</h1>
+          <p class="intro__description intro__description--inner">Чтобы узнать о продукции предприятия, приглашаем
+            Вас посетить сайт компании ЗАО «Еврометфилмз».</p>
+          <p class="intro__description intro__description--inner">На сайте ЗАО «Еврометфилмз» представлен ассортимент
+            пленок, выпускаемых заводом, а также указаны сферы
+            применения нашей продукции.</p>
+          <a href="http://euromet.m-n.agency/" class="button intro__about-button intro__about-button--inner">перейти на сайт</a>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__header">Контакты</h2>
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f07c63b66a195e0409180ee37bed02fdb6ea6e65679344ff81da563cf150789&amp;source=constructor" width="100%" frameborder="0"></iframe>
+        </div>
+        <div class="contacts__text-block">
+          <div class="contacts__address-block">
+          <h3 class="contacts__inner-header">Адрес</h3>
+          <p class="contacts__inner-description">ООО «ИСРАТЭК С» 142800, Московская область, Ступинский район, Старокаширское шоссе, 100 км, владение 1</p>
+          </div>
+          <div class="contacts__telephone-block">
+            <h3 class="contacts__inner-header">Телефон</h3>
+            <p class="contacts__inner-description">+7(495) 580-48-76</p>
+            <h3 class="contacts__inner-header">Факс</h3>
+            <p class="contacts__inner-description">+ 7(495) 543-98-36</p>
+          </div>
+          <button type="button" class="button contacts__about-button">связь с нами</button>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
