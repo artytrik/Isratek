@@ -1,0 +1,156 @@
+.send__form-block {
+  margin-top: 30px;
+}
+
+.send__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.send__form-element {
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.send__form-button {
+  border-radius: 1px;
+  padding: 10px;
+
+  &--add + label {
+    position: relative;
+    color: $white;
+    display: inline-block;
+    background-color: transparent;
+    border: 3px solid $blue;
+    @include font(18px, 500, 24px, "Ubuntu");
+    text-align: left;
+    padding: 22px 25px;
+    border-radius: 1px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &::before {
+      @include pseudo;
+
+      width: 18px;
+      height: 18px;
+
+      top: 24px;
+      right: 15px;
+
+      @include back("../img/attach.svg");
+    }
+  }
+
+  &--add:focus + label,
+  &--add + label:hover {
+      opacity: 0.8;
+  }
+
+  &--add:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+
+  &--send {
+    @include font(20px, 500, 24px, "Ubuntu");
+    margin-bottom: 10px;
+    padding: 25px;
+  }
+}
+
+.send__form-description {
+  position: relative;
+  display: block;
+  padding: 10px 0 0 30px;
+  box-sizing: border-box;
+  margin: 0;
+  @include font(12px, 300, 18px, "Ubuntu", #a3a3a3);
+  order: 1;
+  width: 80%;
+
+  &::before {
+    @include pseudo;
+
+    width: 20px;
+    height: 20px;
+
+    top: 8px;
+    left: 2px;
+
+    @include back("../img/check.svg");
+    background-size: 55%;
+  }
+}
+
+.send__form-input {
+  padding: 20px 10px;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-bottom: 1px solid #a3a3a3;
+  @include font(16px, 500, 20px, "Ubuntu", $white);
+
+  &::placeholder {
+    @include font(16px, 300, 20px, "Ubuntu", #a3a3a3);
+  }
+}
+
+@include tablet {
+  .send__form-block {
+    margin-top: 90px;
+  }
+
+  .send__form {
+    flex-direction: row;
+    margin-top: 80px;
+  }
+
+  .send__form-element {
+    width: 48%;
+    margin-bottom: 90px;
+  }
+
+  .send__form-input--message {
+    padding-top: 30px;
+    margin-bottom: 45px;
+  }
+
+  .send__form-button--add + label {
+    width: 48%;
+    margin-bottom: 60px;
+  }
+
+  .send__form-description {
+    order: 0;
+  }
+}
+
+@include desktop {
+  .send__form-block {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 95px;
+  }
+
+  .send__form-element {
+    width: 42%;
+
+    &:nth-child(2n) {
+      margin-right: 5%;
+    }
+  }
+
+  .send__form-button--add + label {
+    width: 42%;
+    margin-right: 5%;
+  }
+
+  .send__form-description {
+    margin: 0 auto;
+  }
+}

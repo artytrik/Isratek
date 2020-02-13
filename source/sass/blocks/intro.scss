@@ -10,6 +10,10 @@
   &--products {
     @include back("../img/products.jpg");
   }
+
+  &--contacts {
+    @include back("../img/contacts.jpg");
+  }
 }
 
 .intro__wrapper {
@@ -135,6 +139,10 @@
       width: 66%;
       margin-bottom: 45px;
     }
+
+   &--contacts {
+     width: 100%;
+   }
   }
 
   .intro__header {
@@ -210,6 +218,10 @@
 
     &--inner {
       width: 50%;
+    }
+
+    &--contacts {
+      width: 100%;
     }
   }
 
