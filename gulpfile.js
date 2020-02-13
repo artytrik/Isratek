@@ -11,6 +11,9 @@ const svgstore = require('gulp-svgstore');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const del = require('del');
+const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
 const ghPages = require('gulp-gh-pages');
 
 gulp.task('style', () => (
@@ -26,6 +29,12 @@ gulp.task('style', () => (
     .pipe(server.stream()))
 );
 
+gulp.task('js', () => (
+  gulp.src('source/js/index.js')
+  .pipe(webpackStream(webpackConfig), webpack)
+  .pipe(gulp.dest('build/'))
+));
+
 gulp.task('serve', () => {
   server.init({
     server: 'build/',
@@ -39,7 +48,7 @@ gulp.task('serve', () => {
   gulp.watch('source/img/*.svg', gulp.series('sprite', 'html', 'reload'));
   gulp.watch('source/img/**/*.{png,jpg,svg}', gulp.series('images', 'reload'));
   gulp.watch('source/*.html', gulp.series('html', 'reload'));
-  gulp.watch('source/js/**/*.js', gulp.series('copy', 'reload'));
+  gulp.watch('source/js/**/*.js', gulp.series('js', 'reload'));
   gulp.watch('source/*.php', gulp.series('copy', 'reload'));
 });
 
@@ -96,6 +105,6 @@ gulp.task('deploy', () => (
   )
 );
 
-gulp.task('build', gulp.series('clean', 'sprite', gulp.parallel('copy', 'style', 'images', 'html')));
+gulp.task('build', gulp.series('clean', 'sprite', gulp.parallel('copy', 'style', 'js', 'images', 'html')));
 
 gulp.task('start', gulp.series('build', 'serve'));
