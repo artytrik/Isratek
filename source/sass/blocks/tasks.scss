@@ -1,0 +1,126 @@
+.tasks {
+  @include back("../img/tasks.jpg");
+  background-size: cover;
+}
+
+.tasks__wrapper {
+  padding: 25px 20px 50px;
+  max-width: $mobile-middle-width;
+  margin: 0 auto;
+}
+
+.tasks__header {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include font(36px, bold, 48px, "Bebas Neue", $white);
+}
+
+.tasks__sub-header {
+  margin: 0;
+  margin-bottom: 60px;
+  width: 80%;
+  letter-spacing: 0.5px;
+
+  @include font(24px, bold, 36px, "Bebas Neue", $white);
+}
+
+.tasks__list {
+  @include clear-ul;
+
+  counter-reset: myCounter;
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks__item {
+  display: flex;
+  position: relative;
+  margin-bottom: 75px;
+
+  &:before {
+    position: absolute;
+    counter-increment: myCounter;
+    top: -50px;
+    left: -5px;
+    content:counter(myCounter, decimal-leading-zero);
+
+    @include font(100px, bold, 110px, "Bebas Neue", #2ba6f3);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tasks__item-description {
+  margin: 0;
+  position: relative;
+  width: 95%;
+
+  @include font(14px, normal, 24px, "Montserrat", $white);
+}
+
+@include tablet {
+  .tasks__wrapper {
+    max-width: $tablet-middle-width;
+    padding: 55px 70px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tasks__sub-header {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 105px;
+  }
+
+  .tasks__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tasks__header {
+    text-align: left;
+    font-size: 72px;
+    line-height: 72px;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .tasks__item {
+    width: 45%;
+    margin-bottom: 90px;
+  }
+
+  .tasks__item-description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+  }
+}
+
+@include desktop {
+  .tasks__wrapper {
+    max-width: $desktop-width;
+    padding: 80px 30px 60px;
+  }
+
+  .tasks__header {
+    font-size: 100px;
+    line-height: 110px;
+    margin-bottom: 30px;
+  }
+
+  .tasks__item-description {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .tasks__item {
+    width: 30%;
+    margin-bottom: 85px;
+  }
+}

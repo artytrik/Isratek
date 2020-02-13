@@ -51,7 +51,7 @@
 @include tablet {
   .partners__wrapper {
     max-width: $tablet-middle-width;
-    padding: 10px 70px 20px;
+    padding: 55px 70px 20px;
   }
 
   .partners__header {
@@ -85,7 +85,7 @@
 @include desktop {
   .partners__wrapper {
     max-width: $desktop-width;
-    padding: 70px 30px 20px;
+    padding: 80px 30px 20px;
   }
 
   .partners__header {

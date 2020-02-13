@@ -2,6 +2,10 @@
   @include back("../img/intro.jpg");
   background-size: cover;
   margin-top: -121px;
+
+  &--inner {
+    @include back("../img/inner-intro.jpg");
+  }
 }
 
 .intro__wrapper {
@@ -10,6 +14,10 @@
   max-width: $mobile-middle-width;
   display: flex;
   flex-direction: column;
+
+  &--inner {
+    padding-bottom: 15px;
+  }
 }
 
 .intro__header {
@@ -21,6 +29,13 @@
   margin-bottom: 10px;
 
   @include font(60px, 700, 72px, "Bebas Neue", $white);
+
+  &--inner {
+    font-size: 48px;
+    line-height: 56px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .intro__description {
@@ -32,6 +47,18 @@
 
   @include font(16px, normal, 24px, "Montserrat", $white);
   text-align: center;
+
+  &--inner {
+    margin-bottom: 30px;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.intro__text-wrapper {
+  &--inner {
+    margin-bottom: 10px;
+  }
 }
 
 .intro__about-button {
@@ -94,6 +121,11 @@
   .intro__text-wrapper {
     width: 70%;
     margin-bottom: 95px;
+
+    &--inner {
+      width: 66%;
+      margin-bottom: 45px;
+    }
   }
 
   .intro__header {
@@ -109,12 +141,21 @@
     line-height: 30px;
     text-align: left;
     margin: 0;
+
+    &--inner {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
   }
 
   .intro__list {
     width: 30%;
     margin: 0;
     margin-top: 5px;
+
+    &--inner {
+      margin-top: 125px;
+    }
   }
 
   .intro__list-item {
@@ -144,11 +185,19 @@
 @include desktop {
   .intro {
     margin-top: -160px;
+
+    &--inner {
+      margin-top: -380px;
+    }
   }
 
   .intro__text-wrapper {
     width: 72%;
     margin-bottom: 90px;
+
+    &--inner {
+      width: 50%;
+    }
   }
 
   .intro__wrapper {
@@ -160,11 +209,25 @@
     font-size: 200px;
     line-height: 240px;
     margin-bottom: 0;
+
+    &--inner {
+      font-size: 100px;
+      line-height: 120px;
+      margin-bottom: 30px;
+      margin-top: 60px;
+    }
   }
 
   .intro__description {
     font-size: 23px;
     line-height: 36px;
+    width: 60%;
+
+    &--inner {
+      font-size: 19px;
+      line-height: 30px;
+      width: 100%;
+    }
   }
 
   .intro__list-item-number {
@@ -176,10 +239,12 @@
   .intro__list {
     width: 22%;
     margin-right: 6%;
-  }
 
-  .intro__description {
-    width: 60%;
+    &--inner {
+      align-self: center;
+      margin-top: 0;
+      margin-right: 15%;
+    }
   }
 
   .intro__about-button {

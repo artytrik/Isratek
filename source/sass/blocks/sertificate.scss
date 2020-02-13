@@ -1,0 +1,113 @@
+.sertificate__wrapper {
+  padding: 45px 20px 70px;
+  max-width: $mobile-middle-width;
+  margin: 0 auto;
+}
+
+.sertificate__header {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include font(48px, bold, 48px, "Bebas Neue", $black);
+}
+
+.sertificate__description {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include font(16px, normal, 24px, "Montserrat", $black);
+}
+
+.sertificate__logo-wrapper {
+  margin-bottom: 20px;
+}
+
+.sertificate__sertificate-wrapper {
+  margin-bottom: 25px;
+}
+
+.sertificate__sertificate-description {
+  margin: 0;
+
+  @include font(13px, normal, 18px, "Montserrat", #9a9a9a);
+}
+
+@include tablet {
+  .sertificate {
+    background-color: #f7f7f7;
+  }
+
+  .sertificate__wrapper {
+    max-width: $tablet-middle-width;
+    padding: 60px 70px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .sertificate__header {
+    font-size: 72px;
+    line-height: 84px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .sertificate__description {
+    line-height: 27px;
+    margin-bottom: 40px;
+  }
+
+  .sertificate__logo-wrapper {
+    width: 84%;
+  }
+
+  .sertificate__text-wrapper {
+    width: 45%;
+  }
+
+  .sertificate__inner-wrapper {
+    width: 48%;
+  }
+
+  .sertificate__sertificate-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .sertificate__sertificate-description {
+    text-align: left;
+  }
+}
+
+@include desktop {
+  .sertificate__wrapper {
+    max-width: $desktop-width;
+    padding: 180px 30px 165px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .sertificate__header {
+    font-size: 100px;
+    line-height: 120px;
+    margin-bottom: 30px;
+  }
+
+  .sertificate__description {
+    font-size: 19px;
+    line-height: 30px;
+    width: 92%;
+    margin-bottom: 130px;
+  }
+
+  .sertificate__inner-wrapper {
+    width: 35%;
+    margin-top: 0;
+    position: absolute;
+    top: 115px;
+    right: 10px;
+  }
+
+  .sertificate__sertificate-wrapper {
+    margin-bottom: 30px;
+  }
+}

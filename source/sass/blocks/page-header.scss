@@ -58,6 +58,10 @@
 @include tablet {
   .page-header {
     border-bottom: 1px solid $grey;
+
+    &--inner {
+      border-color: #666d71;
+    }
   }
 
   .page-header__wrapper {
