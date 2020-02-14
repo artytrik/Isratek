@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Исратэк</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=8f54ed1a-fea7-4808-be9d-c65d9758c76d&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 <body>
   <header class="page-header page-header--inner">
@@ -186,8 +188,7 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__header">Контакты</h2>
-        <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f07c63b66a195e0409180ee37bed02fdb6ea6e65679344ff81da563cf150789&amp;source=constructor" width="100%" frameborder="0"></iframe>
+        <div class="contacts__map" id="map">
         </div>
         <div class="contacts__text-block">
           <div class="contacts__address-block">
@@ -205,6 +206,7 @@
       </div>
     </section>
   </main>
+  <script src="index.bundle.js"></script>
   <script src="swiper.bundle.js"></script>
 </body>
 </html>

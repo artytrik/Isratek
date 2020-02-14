@@ -90,10 +90,42 @@
 /*!****************************!*\
   !*** ./source/js/index.js ***!
   \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./map.js */ "./source/js/map.js");
 
+ymaps.ready(_map_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./source/js/map.js":
+/*!**************************!*\
+  !*** ./source/js/map.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var Map = function Map() {
+  var myMap = new ymaps.Map("map", {
+    center: [54.954786, 38.005537],
+    zoom: 14,
+    controls: []
+  });
+  var myPlacemark = new ymaps.Placemark([54.954786, 38.005537], null, {
+    iconLayout: 'default#image',
+    iconImageHref: "img/pin.png",
+    iconImageSize: [40, 57]
+  });
+  myMap.geoObjects.add(myPlacemark);
+  myMap.behaviors.disable('scrollZoom');
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Map);
 
 /***/ })
 
