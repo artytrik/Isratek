@@ -90,30 +90,12 @@
 /*!****************************!*\
   !*** ./source/js/index.js ***!
   \****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _meow_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./meow.js */ "./source/js/meow.js");
 
-console.log(_meow_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
-/***/ "./source/js/meow.js":
-/*!***************************!*\
-  !*** ./source/js/meow.js ***!
-  \***************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var meow = "\u041A\u0420\u042F!";
-/* harmony default export */ __webpack_exports__["default"] = (meow);
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=index.bundle.map

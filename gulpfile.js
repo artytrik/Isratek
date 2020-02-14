@@ -30,7 +30,7 @@ gulp.task('style', () => (
 );
 
 gulp.task('js', () => (
-  gulp.src('source/js/index.js')
+  gulp.src(['source/js/index.js', 'source/js/swiper.js'])
   .pipe(webpackStream(webpackConfig), webpack)
   .pipe(gulp.dest('build/'))
 ));
@@ -87,7 +87,6 @@ gulp.task('html', () => (
 gulp.task('copy', () => (
   gulp.src([
     'source/fonts/**/*.{woff,woff2}',
-    'source/js/**/*.js',
     'source/*.php'
   ], {
     base: 'source'

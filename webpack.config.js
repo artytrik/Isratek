@@ -1,7 +1,12 @@
 module.exports = {
   mode: `development`,
+  entry: {
+    index: './source/js/index.js',
+    swiper: './source/js/swiper.js'
+  },
   output: {
-    filename: `bundle.js`,
+    filename: `[name].bundle.js`,
+    sourceMapFilename: '[name].bundle.map'
   },
   module: {
     rules: [
@@ -11,6 +16,10 @@ module.exports = {
         use: {
           loader: `babel-loader`,
         },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ],
   },

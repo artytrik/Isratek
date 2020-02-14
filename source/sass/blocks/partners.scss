@@ -83,6 +83,10 @@
 }
 
 @include desktop {
+  .partners__swiper {
+    overflow: hidden;
+  }
+
   .partners__wrapper {
     max-width: $desktop-width;
     padding: 80px 30px 20px;
@@ -96,9 +100,6 @@
 
   .partners__list {
     flex-direction: row;
-    justify-content: space-between;
-    max-width: none;
-    width: 100%;
   }
 
   .partners__item {
