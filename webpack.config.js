@@ -2,7 +2,8 @@ module.exports = {
   mode: `development`,
   entry: {
     index: './source/js/index.js',
-    swiper: './source/js/swiper.js'
+    swiper: './source/js/swiper.js',
+    form: './source/js/form.js'
   },
   output: {
     filename: `[name].bundle.js`,

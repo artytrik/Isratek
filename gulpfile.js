@@ -30,9 +30,9 @@ gulp.task('style', () => (
 );
 
 gulp.task('js', () => (
-  gulp.src(['source/js/index.js', 'source/js/swiper.js'])
+  gulp.src(['source/js/index.js', 'source/js/swiper.js', 'source/js/form.js'])
   .pipe(webpackStream(webpackConfig), webpack)
-  .pipe(gulp.dest('build/'))
+  .pipe(gulp.dest('build/js'))
 ));
 
 gulp.task('serve', () => {
