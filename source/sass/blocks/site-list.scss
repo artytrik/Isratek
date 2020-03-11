@@ -1,28 +1,64 @@
+.site-list {
+  @include clear-ul;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  width: 87%;
+  padding: 100px 60px;
+  background-color: $grey;
+}
+
+.site-list__item {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.site-list__item-link {
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  @include font(17px, 700, 22px, "Montserrat", $white);
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    color: $blue;
+  }
+
+  &--active {
+    color: $blue;
+  }
+}
+
+@include tablet {
+  .site-list {
+    padding: 130px 70px;
+    width: 52%;
+  }
+}
+
 @include desktop {
   .site-list {
-    @include clear-ul;
-
-    display: flex;
     justify-content: space-between;
+    flex-direction: row;
     width: 80%;
     padding: 0 30px;
+    background-color: transparent;
   }
 
   .site-list__item-link {
     display: block;
     padding: 30px 0;
+  }
 
-    @include font(17px, 700, 22px, "Montserrat", $white);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    &:hover,
-    &:active {
-      color: $blue;
-    }
-
-    &--active {
-      color: $blue;
-    }
+  .site-list__item {
+    width: auto;
   }
 }

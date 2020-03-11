@@ -96,7 +96,11 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./map.js */ "./source/js/map.js");
+/* harmony import */ var _mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mobile-menu.js */ "./source/js/mobile-menu.js");
 
+
+var toggle = document.querySelector(".page-header__toggle");
+toggle.addEventListener("click", _mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 ymaps.ready(_map_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
@@ -126,6 +130,26 @@ var Map = function Map() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Map);
+
+/***/ }),
+
+/***/ "./source/js/mobile-menu.js":
+/*!**********************************!*\
+  !*** ./source/js/mobile-menu.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var pageHeader = document.querySelector(".page-header");
+
+var onToggleClick = function onToggleClick(evt) {
+  evt.preventDefault();
+  pageHeader.classList.toggle("page-header--opened");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (onToggleClick);
 
 /***/ })
 
