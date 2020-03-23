@@ -118,7 +118,7 @@ var Map = function Map() {
   var myMap = new ymaps.Map("map", {
     center: [54.954786, 38.005537],
     zoom: 14,
-    controls: []
+    controls: ["zoomControl"]
   });
   var myPlacemark = new ymaps.Placemark([54.954786, 38.005537], null, {
     iconLayout: 'default#image',

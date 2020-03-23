@@ -96,9 +96,8 @@
     @include font(30px, 700, 36px, "Bebas Neue", $white);
     letter-spacing: 0.5px;
 
-    &:hover,
-    &:active {
-      opacity: 0.8;
+    &:hover {
+      color: $blue;
     }
   }
 
@@ -113,6 +112,7 @@
   .page-header__wrapper {
     max-width: $desktop-width;
     padding: 45px 30px 51px;
+    justify-content: left;
   }
 
   .page-header__toggle {
@@ -139,6 +139,11 @@
 
   .page-header__logo-wrapper {
     margin-left: 0;
+    margin-right: 80px;
+  }
+
+  .page-header__contacts {
+    margin-left: auto;
   }
 
   .page-header__contacts-link-text {
