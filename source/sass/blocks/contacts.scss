@@ -42,8 +42,13 @@
 .contacts__inner-description {
   margin: 0;
   margin-bottom: 40px;
+  display: block;
 
   @include font(16px, normal, 24px, "Montserrat", $black);
+
+  & span {
+    display: block;
+  }
 }
 
 .contacts__about-button {
@@ -82,7 +87,7 @@
   .contacts__inner-description {
     font-size: 19px;
     line-height: 30px;
-    margin-bottom: 3px;
+    margin-bottom: 20px;
   }
 
   .contacts__telephone-block {
@@ -107,17 +112,17 @@
 @include desktop {
   .contacts__wrapper {
     max-width: $desktop-width;
-    padding: 80px 30px 20px;
+    padding: 80px 30px 10px;
   }
 
   .contacts__header {
     font-size: 100px;
     line-height: 100px;
-    margin-bottom: 185px;
+    margin-bottom: 60px;
   }
 
   .contacts__map {
-    top: 250px;
+    top: 240px;
     width: 55%;
   }
 
