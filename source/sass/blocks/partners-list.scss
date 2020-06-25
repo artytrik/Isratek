@@ -12,6 +12,14 @@
   width: 70%;
   height: 34px;
   margin: 0 auto;
+
+  &--second img {
+    margin-top: -4px;
+  }
+
+  &--third img {
+    margin-top: 4px;
+  }
 }
 
 @include tablet {
