@@ -86,7 +86,8 @@ gulp.task('html', () => (
 gulp.task('copy', () => (
   gulp.src([
     'source/fonts/**/*.{woff,woff2}',
-    'source/*.php'
+    'source/*.php',
+    'source/pdf/*.pdf'
   ], {
     base: 'source'
   })
