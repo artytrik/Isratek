@@ -220,6 +220,33 @@
       </div>
     </section>
   </main>
+
+  <section class="modal-call">
+    <div class="modal-call__wrapper">
+      <h2 class="modal-call__header">Заказать звонок</h2>
+      <form id="form" class="modal__form" method="POST">
+        <fieldset class="modal-call__fieldset">
+          <input type="text" name="call-name" id="call-name" class="modal-call__input modal-call__element" placeholder="Ваше имя" required>
+          <label for="call-name" class="visually-hidden">Ваше имя</label>
+          <input type="tel" name="call-tel" id="call-tel" class="modal-call__input modal-call__element" placeholder="Ваш телефон" required>
+          <label for="call-tel" class="visually-hidden">Ваш телефон</label>
+        </fieldset>
+        <button type="submit" class="button modal-call__button modal-call__element">Отправить</button>
+      </form>
+    </div>
+    <svg class="modal-call__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+  </section>
+
+  <section class="modal-success">
+    <div class="modal-success__wrapper">
+      <svg class="modal-success__cross cross" fill="#ffffff" width="20px" height="20px" viewBox="0 0 40 40" enable-background="new 0 0 50 50"><path d="M37.304 11.282l1.414 1.414-26.022 26.02-1.414-1.413z"/><path d="M12.696 11.282l26.022 26.02-1.414 1.415-26.022-26.02z"/></svg>
+      <h2 class="modal-success__header">Спасибо, ваша заявка принята!</h2>
+    </div>
+  </section>
+
+  <div class="modal-overlay"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/index.bundle.js"></script>
   <!--<script src="js/swiper.bundle.js"></script>-->
 </body>

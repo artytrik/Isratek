@@ -1,0 +1,86 @@
+.modal-call {
+  display: none;
+  position: fixed;
+  max-width: 536px;
+  width: 80%;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  z-index: 100;
+  transition: 0.3s all;
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal-call__wrapper {
+  padding: 60px 10% 70px;
+}
+
+.modal-call__header {
+  margin: 0;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @include font(48px, bold, 56px, $black);
+}
+
+.modal-call__fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.modal-call__element {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.modal-call__input {
+  box-sizing: border-box;
+  border: 1px solid #d7d7d7;
+}
+
+.modal-call__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  fill: $black;
+  cursor: pointer;
+}
+
+@include mobile {
+  .modal-call__header {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+
+  .modal-call__element {
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 15px 25px;
+  }
+
+  .modal-call__wrapper {
+    padding: 40px 5%;
+  }
+
+  .modal-call__cross {
+    top: 12px;
+    right: 12px;
+  }
+}
